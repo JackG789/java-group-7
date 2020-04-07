@@ -1,6 +1,7 @@
 import java.util.Scanner;
+import java.util.Random;
 
-public class Diary extends HealthProfessional {
+public class DiaryEntry extends HealthProfessional {
 
 
 	public Diary(int newid, String newname, String newworkArea, String newprofession) {
@@ -18,27 +19,6 @@ public class Diary extends HealthProfessional {
 	 * treatement type
 	 *
 	 */
-	public  void menu() {
-		String IDChoice;
-
-
-
-        	Scanner s1 = new Scanner(System.in);
-        	System.out.println("Please enter your Health Professional ID, and press ENTER: ");
-        	IDChoice = s1.nextLine();
-
-
-
-
-	}
-
-
-
-
-
-
-
-
 
 
 }

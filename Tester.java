@@ -114,8 +114,7 @@ public class Tester
         Scanner s = new Scanner(System.in);
 
     	System.out.println("Please enter the ID of the Health Professional you'd like to delete");
-    	del = s.nextInt();
-
+      //to do
     }
 
     public void edit() {

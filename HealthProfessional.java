@@ -68,7 +68,7 @@ public class HealthProfessional
     {
         String formattedinfo;
 
-        formattedinfo="Health Professional info: "+ "ID:"+ id + "| Name:" + name +  "| Working Area: " + workArea + "| Profession" + profession;
+        formattedinfo="Health Professional info: "+ "ID:"+ id + "| Name:" + name +  "| Working Area: " + workArea + "| Profession: " + profession;
 
         return formattedinfo;
     }

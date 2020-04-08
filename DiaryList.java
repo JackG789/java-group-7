@@ -142,21 +142,13 @@ class DiaryList {
 		}
 
 		// another Node constructor if we want to specify the node to point to.
-		@SuppressWarnings("unused")
-		public Node(Object dataValue, Node nextValue) {
-			next = nextValue;
-			data = dataValue;
-		}
+
 
 		// these methods should be self-explanatory
 		public Object getData() {
 			return data;
 		}
 
-		@SuppressWarnings("unused")
-		public void setData(Object dataValue) {
-			data = dataValue;
-		}
 
 		public Node getNext() {
 			return next;

@@ -39,7 +39,7 @@ class HealthProfessionalList {
 		counter++;
 	}
 
-	private void decrementCounter() {
+	private void dCounter() {
 		counter--;
 	}
 
@@ -49,7 +49,7 @@ class HealthProfessionalList {
 		Node HPCurrent = head;
 
 		if (HPCurrent != null) {
-			// crawl to the requested index or the last element in the list, whichever comes first
+
 			for (int i = 0; i < index && HPCurrent.getNext() != null; i++) {
 				HPCurrent = HPCurrent.getNext();
 			}
@@ -59,7 +59,6 @@ class HealthProfessionalList {
 
 		HPCurrent.setNext(HPTemp);
 
-		// increment the number of elements variable
 		incrementCounter();
 	}
 
@@ -84,7 +83,7 @@ class HealthProfessionalList {
 
 	}
 
-	// removes the element at the specified position in this list.
+	// removes the element at the specified position in the list.
 	public boolean remove(int index) {
 
 		// if the index is out of range, exit
@@ -101,8 +100,8 @@ class HealthProfessionalList {
 			}
 			HPCurrent.setNext(HPCurrent.getNext().getNext());
 
-			// decrement the number of elements variable
-			decrementCounter();
+			// decrease the number of elements variable
+			dCounter();
 			return true;
 
 		}
@@ -129,31 +128,24 @@ class HealthProfessionalList {
 	}
 
 	private class Node {
-		// reference to the next node in the chain, or null if there isn't one.
 		Node next;
 
-		// data carried by this node. could be of any type you need.
 		Object data;
 
-		// Node constructor
 		public Node(Object dataValue) {
 			next = null;
 			data = dataValue;
 		}
 
-		// another Node constructor if we want to specify the node to point to.
-		@SuppressWarnings("unused")
 		public Node(Object dataValue, Node nextValue) {
 			next = nextValue;
 			data = dataValue;
 		}
 
-		// these methods should be self-explanatory
 		public Object getData() {
 			return data;
 		}
 
-		@SuppressWarnings("unused")
 		public void setData(Object dataValue) {
 			data = dataValue;
 		}

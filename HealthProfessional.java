@@ -8,9 +8,7 @@ public class HealthProfessional
     private String profession;
     private int id;
 
-    /**
-     * Constructor for objects of class Student
-     */
+    
     public HealthProfessional(int newid, String newname, String newworkArea, String newprofession)
     {
         // initialise instance variables

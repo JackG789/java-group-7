@@ -8,7 +8,7 @@ class AppointmentLinkedList {
 
 	}
 
-	// adds the specified element to the end of the list.
+	// adds the specified element to the end of this list.
 	public void add(Object data) {
 
 		if (head == null) {
@@ -40,7 +40,7 @@ class AppointmentLinkedList {
 		counter++;
 	}
 
-	private void dCounter() {
+	private void decrementCounter() {
 		counter--;
 	}
 
@@ -50,7 +50,7 @@ class AppointmentLinkedList {
 		Node AppCurrent = head;
 
 		if (AppCurrent != null) {
-
+			// crawl to the requested index or the last element in the list, whichever comes first
 			for (int i = 0; i < index && AppCurrent.getNext() != null; i++) {
 				AppCurrent = AppCurrent.getNext();
 			}
@@ -88,7 +88,7 @@ class AppointmentLinkedList {
 	// removes the element at the specified position in this list.
 	public boolean remove(int index) {
 
-//exit statement
+		// if the index is out of range, exit
 		if (index < 1 || index > size())
 			return false;
 
@@ -102,7 +102,8 @@ class AppointmentLinkedList {
 			}
 			AppCurrent.setNext(AppCurrent.getNext().getNext());
 
-			dCounter();
+			// decrement the number of elements variable
+			decrementCounter();
 			return true;
 
 		}
@@ -129,24 +130,31 @@ class AppointmentLinkedList {
 	}
 
 	private class Node {
+		// reference to the next node in the chain, or null if there isn't one.
 		Node next;
 
+		// data carried by this node. could be of any type you need.
 		Object data;
 
+		// Node constructor
 		public Node(Object dataValue) {
 			next = null;
 			data = dataValue;
 		}
 
+		// another Node constructor if we want to specify the node to point to.
+		@SuppressWarnings("unused")
 		public Node(Object dataValue, Node nextValue) {
 			next = nextValue;
 			data = dataValue;
 		}
 
+		// these methods should be self-explanatory
 		public Object getData() {
 			return data;
 		}
 
+		@SuppressWarnings("unused")
 		public void setData(Object dataValue) {
 			data = dataValue;
 		}

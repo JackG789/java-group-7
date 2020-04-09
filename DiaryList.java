@@ -39,7 +39,7 @@ class DiaryList {
 		counter++;
 	}
 
-	private void decrementCounter() {
+	private void dCounter() {
 		counter--;
 	}
 
@@ -49,7 +49,7 @@ class DiaryList {
 		Node DiaryCurrent = head;
 
 		if (DiaryCurrent != null) {
-			// crawl to the requested index or the last element in the list, whichever comes first
+		
 			for (int i = 0; i < index && DiaryCurrent.getNext() != null; i++) {
 				DiaryCurrent = DiaryCurrent.getNext();
 			}
@@ -101,8 +101,7 @@ class DiaryList {
 			}
 			DiaryCurrent.setNext(DiaryCurrent.getNext().getNext());
 
-			// decrement the number of elements variable
-			decrementCounter();
+			dCounter();
 			return true;
 
 		}
@@ -129,34 +128,21 @@ class DiaryList {
 	}
 
 	private class Node {
-		// reference to the next node in the chain, or null if there isn't one.
 		Node next;
 
-		// data carried by this node. could be of any type you need.
 		Object data;
 
-		// Node constructor
 		public Node(Object dataValue) {
 			next = null;
 			data = dataValue;
 		}
 
-		// another Node constructor if we want to specify the node to point to.
-		@SuppressWarnings("unused")
-		public Node(Object dataValue, Node nextValue) {
-			next = nextValue;
-			data = dataValue;
-		}
 
-		// these methods should be self-explanatory
+
 		public Object getData() {
 			return data;
 		}
 
-		@SuppressWarnings("unused")
-		public void setData(Object dataValue) {
-			data = dataValue;
-		}
 
 		public Node getNext() {
 			return next;

@@ -11,16 +11,7 @@ public class DiaryEntry extends HealthProfessional {
 		// TODO Auto-generated constructor stub
 	}
 
-	/*include
-	 * appointments
-	 * treatments
-	 * for each appointments
-	 * 	date
-	 * start time
-	 * end time
-	 * treatement type
-	 *
-	 */
+//Jack
 
 
 }

@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Appointment {
 
 
+
 	 String appName;
 	    String appType;
 
@@ -223,6 +224,15 @@ public class Appointment {
 
 
 
+
+
+
+
+
+
+
+
+
   public void displayAppointmentInfo(){
     System.out.println("Appointment Information");
     System.out.println("=========================");
@@ -234,6 +244,9 @@ public class Appointment {
     System.out.println("Appointment Type: " + appType);
 
   }
+
+
+
 
 
 
